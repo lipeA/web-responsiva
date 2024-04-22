@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web - Responsiva</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js"></script>
     <!-- font google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,41 +16,194 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container-header">
             <div class="logo-container">
-                <img src="./img/logo.svg" alt=" logo da pousada" class="logo">
-                <h3>Pousada da Montanha</h3>
+                <img src="./img/logo2.png" alt=" logo da pousada" class="logo">
+                <h3>Consciência Ambiental</h3>
             </div>
-            <div class="menu-container">
+            <nav class="menu-container">
                 <ul class="menu">
-                    <li> <a href="#"> inicio &nbsp;&nbsp;&nbsp;</a> /</li>
-                    <li><a href="#">alojamento &nbsp;&nbsp;&nbsp;</a> /</li>
-                    <li><a href="#">preçario &nbsp;&nbsp;&nbsp;</a> /</li>
-                    <li><a href="#">contato</a> </li>
+                    <li> <a href="#header"> inicio </a></li>
+                    <li><a href="#servicos">Dicas Sustentáveis</a></li>
+                    <li><a href="#destaque">Ação Coletiva</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">contato</a></li>
                 </ul>
-            </div>
+            </nav>
+            <nav class="menu-hamburder">
+                <img src="./img/menu-bar.png" alt="" onclick="menuClique()" >
+                <ul id="opcao" >
+                    <li> <a href="#header"> inicio </a></li>
+                    <li><a href="#servicos">Dicas Sustentáveis</a></li>
+                    <li><a href="#destaque">Ação Coletiva</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contato">contato</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="container-titulo-principal">
-                <h1>Bem-vindo ás montanhas</h1>
-                <p>Desfrute a natureza ao redor e reponha as suas energias </p>
+            <h1>Protegendo Nosso Planeta</h1>
+            <p>Desfrute a natureza ao redor e reponha as suas energias </p>
         </div>
     </header>
+
     <main>
-        <section class="destaque">
-            <div class="destaque-info">
-                <h4 >Você vai sentir-se em casa</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            </div>
-            <div class="destaque-container">
-                <div class="destaque-foto">
-                    <!-- <img src="./img/casal.png" alt=""> -->
+        <section class="servicos" id="servicos">
+
+            <div class="servicos-container">
+
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-42020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Reduza, Reutilize, Recicle</h4>
+                        <p>acredito que pequenos gestos podem mudar o mundo e que se cada um fizer uma pequena parte,
+                            podemos sim, juntos viver num mundo melhor.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-122020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Economize Energia</h4>
+                        <p>O gasto com energia é um dos que mais pesa no bolso dos brasileiros. Com a escassez hídrica,
+                            o valor da tarifa pelo kWh aumentou drasticamente de alguns meses para cá.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-72020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Plante Árvores</h4>
+                        <p>O plantio de árvores é uma das alternativas mais simples e benéficas para reverter os
+                            impactos ambientais já causados pelo homem na natureza.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-62020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Ação Coletiva</h4>
+                        <p>Participe de projetos ambientais e Junte-se a grupos de conscientização.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-82020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Projetos ambientais</h4>
+                        <p>Para melhorar o desempenho ambiental de sua organização.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-92020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Biodiversidade</h4>
+                        <p>Saiba como proteger habitats naturais e Explore a importância da biodiversidade.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-112020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Prefira Produtos com Embalagens Sustentáveis</h4>
+                        <p>Opte por embalagens recicláveis ou reutilizáveis e Evite plásticos descartáveis sempre que
+                            possível.</p>
+                    </div>
+                </div>
+                <div class="servicos-item">
+                    <img src="./img/Prancheta-32020-06-18.png" alt="">
+                    <div class="servicos-item-info">
+                        <h4>Economize Água</h4>
+                        <p>Repare vazamentos e use a água de forma consciente e Feche a torneira enquanto escova os
+                            dentes.</p>
+                    </div>
                 </div>
 
             </div>
-            
+        </section>
+        <section class="destaque" id="destaque">
+            <div class="destaque-info">
+                <h4>Consciência Ambiental:</h4>
+                <p>Protegendo Nosso Planeta</p>
+            </div>
+            <div class="destaque-foto">
+                <img src="./img/eco.jpg" alt="">
+                <p>A consciência ambiental é fundamental para garantir um futuro sustentável para o nosso planeta.
+                    Precisamos cuidar dos recursos naturais, reduzir o desperdício e proteger a biodiversidade.
+                    Vamos trabalhar juntos para proteger nosso planeta e garantir um futuro melhor para as próximas
+                    gerações.
+
+                </p>
+            </div>
+        </section>
+        <section class="blog" id="blog">
+            <div class="blog-info">
+                <h4>Blog</h4>
+                <p>Mantenha-se Informado</p>
+            </div>
+            <div class="blog-container">
+                <div class="blog-trilhas">
+
+                    <h4>Cultivo de cereais com composto orgânico: 11% a mais de produtividade</h4>
+                    <p>A aplicação composto orgânico em terras cultiváveis demonstrou reduzir a necessidade de
+                        fertilizantes sintéticos.
+                        Pesquisas sobre o impacto do manejo do solo e uso do composto orgânico, demonstram aumento no
+                        rendimento do milho (Zea mays),
+                        da soja (Glycine max) e do trigo (Triticum aestivum). Concentrações de Matéria Orgânica (MO),
+                        fósforo (P) e potássio (K) no […]
+                        <br><span>
+                            20/04/2024
+                        </span>
+                    </p>
+                </div>
+                <div class="blog-trilhas">
+
+                    <h4>Transformação do conceito de agricultura</h4>
+                    <p> “Não existem pragas. Existem agentes otimizadores de processos de vida.
+                        A única praga que conheço no meu plantio sou eu mesmo” Ernst Götsch O conceito da agricultura
+                        tropical regenerativa (ART)
+                        tem sido trabalhado para reduzir os efeitos negativos da agricultura tradicional em solos
+                        brasileiros, aumentar o resultado
+                        financeiro das lavouras de cereais, cafés e outras […]
+                        <br> <span>
+                            08/04/2024
+                        </span>
+                    </p>
+                </div>
+                <div class="blog-trilhas">
+
+                    <h4>Água, Sorocaba, Ituparanga e nossa vida.</h4>
+                    <p>Vivemos numa sociedade de excessos. Esta imagem é tirada hoje no Reservatório de Itupararanga
+                        (APA Itupararanga).
+                        Nesta foto estou dentro de um braço do reservatório, no bairro da ressaca, em Ibiuna/SP.
+                        Claramente sem água. Nós
+                        só lembramos deste importante recurso natural quando estamos na escassez, e dessa vez a coisa tá
+                        braba! Perdemos muitos recursos […]
+                        <br><span>
+                            03/08/2021
+                        </span>
+                    </p>
+                </div>
+            </div>
         </section>
     </main>
+    <footer class="rodape" id="contato">
+        <div class="rodape-container">
+            <div class="rodape-arrow">
+                <a href="#header">
+                    <img src="./img/left-chevron.png" alt="">
+                </a>
+            </div>
+            <div class="rodape-athor">
+                <div class="meu-site">
+                    feito: &nbsp;<a href="https://www.github.com/lipeA" target="_blank"> Felipe Assis de Jesus</a>
+                </div>
+                <div class="redes-sociais">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://www.linkedin.com/in/felipe-assis-de-jesus-a981bb117/" target="_blank"> <img
+                            src="./img/linkedin.png" alt=""> </a>
+                    <a href="https://www.github.com/lipeA" target="_blank"> <img src="./img/code.png" alt=""> </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 

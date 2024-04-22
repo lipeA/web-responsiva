@@ -1,16 +1,32 @@
+:root{
+    --color-primary: #488CCB;
+    --color-gray: #888f92;
+    --color-while: #fff;
+    --color-black-opcacity: #343A40;
+    --color-green:  #034720;
+    --color-back: #222328;
+    
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", "sans-serif";
 }
+html {
+    scroll-behavior: smooth;
+  }
+
+/* estilos do header */
 
 .header{
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/fundo.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.26)), url("../img/banner2.jpg");
     background-attachment: fixed;
-    width: 100vw;
+    background-position: bottom;
+    width: 100%;
     height: 70vh ;
    
    
@@ -19,29 +35,27 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    padding-top:2.5rem;
+    padding-top:2rem;
 
-
-   
 }
 .logo-container{
  
     display: flex;
     justify-content: left;
     align-items: center;
-    gap: 1.2rem;
+
     
 }
 
 .logo-container h3{
-    color: #fff;
+    color: var(--color-while);
     font-weight: 500;
     font-size: 1.4rem;
     cursor: pointer;
 
 }
 .logo{
-    width: 5%;
+    width: 16%;
     
 }
 
@@ -55,17 +69,18 @@
     display: flex;
     list-style: none;
     gap: 2.5rem;
-    color: #fff;
+    color: var(--color-while);
 }
 
 .menu a{
     text-decoration: none;
-    color: #fff;
+    color: var(--color-while);
     text-transform: uppercase;
     cursor: pointer;
+    font-weight: 500;
 }
 .menu a:hover{
-    color: #9c9c9c;
+    color: var(--color-primary);
 }
 .container-titulo-principal{
     display: flex;
@@ -73,11 +88,16 @@
     justify-content: center;
     align-items: center;
     margin-top: 10rem;
-    color: #ffffffe0;
+    color: var(--color-while);
     gap: 3rem;
 
 
 }
+.menu-hamburder{
+    display: none;
+}
+
+
 .container-titulo-principal h1{
     font-weight: 500;
     font-size: 5rem;
@@ -85,42 +105,291 @@
 .container-titulo-principal p{
     font-size: 1.5rem;
 }
+
+/* estilos dos servicos */
+.servicos{
+    background-color: var(--color-back);
+    padding: 6rem 0;
+}
+.servicos-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    flex-direction: row;
+    padding: 0 15rem;
+
+}
+.servicos-item{
+    max-width: 30rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin: 2rem;
+}
+.servicos-item-info{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.servicos-item img{
+    width: 4rem;
+    height: 3rem;
+}
+.servicos-item-info h4{
+    color: var(--color-while);
+    font-weight: 500;
+}
+.servicos-item-info p{
+    color: var(--color-gray);
+}
+
+
+
+
+/* estilos da seção destaque */
 .destaque{
-   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.466), rgba(216, 201, 201, 0.055)), url("../img/residuos-solidos.jpg");
     width: 100%;
+    padding-bottom:  5.5rem;
+    padding-top: 3.5rem;
    
 }
 .destaque-info{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+  
 
 }
 .destaque-info h4{
-    color: #488CCB;
-    font-weight: 200;
+    color: var(--color-primary);
+    font-weight: 400;
     font-size: 4rem;
 
 }
 .destaque-info p{
-    color: #B9BBB9;
-    font-size: 1.3rem;
+    color: var(--color-while);
+    font-size: 2rem;
 }
 
-
 .destaque-foto{
-    margin-top: 90px;
     display: flex;
-    justify-content: first baseline;
+    justify-content: start;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 0 30rem;
+    gap: 3rem;
+
+}
+.destaque-foto img{
+    width: 50%;
+    height: 50%;
+    border-radius: 2rem;
+}
+.destaque-foto p{
+    color: var(--color-while);
+    line-height: 1.7rem;
+}
+.casal{
+    color: var(--color-black-opcacity);
+    font-weight: 500;
+}
+
+/* estilos da seção blog */
+
+.blog{
+    padding-top: 3rem;
+}
+.blog-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.blog-info h4{
+    color: var(--color-primary);
+    font-size: 4rem;
+    font-weight: 400;
+}
+.blog-info p {
+    font-size: 1.5rem;
+}
+
+.blog-container{
+    display: grid;
+    align-items: start;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 0 16rem 5rem 16rem;
+
+}
+.blog-trilhas{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+    gap: 2rem;
+    margin-top: 2.5rem;
+
+}
+.blog-trilhas h4{
+    color: var(--color-primary);
+}
+.blog-trilhas p{
+    color: var(--color-gray);
+}
+/* estilos rodape */
+.rodape{
+    background-color: var(--color-back);
+}
+.rodape-container{
+    display: block;
+    align-items: center;
+    justify-content: center;
    
 
 }
+.rodape-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid var(--color-black-opcacity);
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+}
+.rodape-arrow img{
+    width: 2.5rem;
+}
+.rodape-athor{
+    padding: 2.5rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-while);
 
-.destaque-foto img{
-    width: 15%;
-    border: 1px solid red;
 }
-.destaque-foto p{
-    border: 1px solid blue;
+.rodape-athor a{
+    text-decoration: none;
+    color: var(--color-while);
+    text-transform: uppercase;
+
 }
+.rodape-athor a:hover{
+    color: var(--color-primary);
+}
+.redes-sociais{
+    display: block;
+    
+}
+.redes-sociais img{
+    width: 3rem;
+    margin: 0.5rem;
+}
+
+/* Estilos para dispositivos móveis  */
+@media (max-width: 1110px) {
+    .logo-container h3{
+        font-size: 1.5rem;
+    }
+
+    .menu-container{
+        display: none;
+    }
+    .menu-hamburder{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end ;
+       
+       
+    }
+    .menu-hamburder ul{
+        background-color: var(--color-gray);
+        padding: 1rem 2rem;
+        margin-right: 1.5rem;
+        display: none;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+    }
+    .mostrar {
+       
+    }
+    .menu-hamburder ul li{
+        list-style: none;
+        margin-bottom: 1.5rem;
+       
+    }
+    .menu-hamburder a{
+        text-decoration: none;
+        color: var(--color-while);
+        text-transform: uppercase;
+        cursor: pointer;
+        font-weight: 500;
+        padding: 0 1rem;
+    }
+    .menu-hamburder a:hover{
+        background-color: var(--color-back);
+        color: var(--color-while);
+    }
+
+    .menu-hamburder img{
+        width: 10%;
+        cursor: pointer;
+    }
+
+
+    .container-titulo-principal{
+        gap: 0;
+    }
+   .container-titulo-principal h1{
+    font-size: 2.5rem;
+   }
+   .container-titulo-principal p{
+    font-size: 1.2rem;
+   }
+
+   /* serviços */
+
+   .servicos-container{
+    padding: 0;
+   }
+
+   /* destaques */
+
+   .destaque-info h4{
+    font-size: 2rem;
+   }
+   .destaque-info p {
+    font-size: 1.5rem;
+   }
+   .destaque-foto{
+    display: block;
+    text-align: center;
+    padding: 0;
+   }
+   .destaque-foto p{
+    padding: 0 0.5rem;
+   }
+
+   /* blog */
+
+   .blog-container{
+    padding: 0;
+    display: block;
+   }
+
+
+
+
+
+
+
+
+
+  }
